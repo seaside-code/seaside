@@ -37,11 +37,3 @@ CREATE POLICY "Users can insert their own profile"
 CREATE POLICY "Users can delete their own profile"
     ON profile_config
     FOR DELETE USING (auth.uid() = user_id);
-
-
-
-
---
--- org configuration for those that are in an org, the first member is the owner and admin
--- should include org name, description, logo_url, website, location, etc
---
